@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Cưới | Wedding Invitation</title>
+    <meta name="description"
+        content="Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi. We cordially invite you to our wedding celebration.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Welcome Overlay -->
+    <div id="welcome-overlay">
+        <div class="welcome-inner">
+            <div class="welcome-decoration">💍</div>
+            <p class="welcome-subtitle">Wedding Invitation</p>
+            <h2 class="welcome-names">Nam & Quỳnh</h2>
+            <p class="welcome-date">11 . 04 . 2026</p>
+            <button id="open-invitation" class="welcome-btn">
+                <span>Mở Thiệp Cưới</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating petals -->
+    <div id="petals-container"></div>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">N & Q</a>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#hero">Trang chủ</a></li>
+                <li><a href="#couple">Cô dâu & Chú rể</a></li>
+                <li><a href="#story">Câu chuyện</a></li>
+                <li><a href="#gallery">Album ảnh</a></li>
+                <li><a href="#events">Sự kiện</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide active"
+                style="background-image: url('img/659139270_1531405685661408_6469761221452480448_n.jpg')"></div>
+            <div class="hero-slide"
+                style="background-image: url('img/663284958_1531405555661421_5796943943772107113_n.jpg')"></div>
+            <div class="hero-slide"
+                style="background-image: url('img/665360645_1531405835661393_5159623360062524888_n.jpg')"></div>
+            <div class="hero-slide"
+                style="background-image: url('img/660524727_1531405775661399_2648193297180457444_n.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-name">Nam</span>
+                <span class="hero-ampersand">&</span>
+                <span class="hero-name">Quỳnh</span>
+            </h1>
+            <div class="hero-divider">
+                <span class="divider-line"></span>
+                <span class="divider-heart">♥</span>
+                <span class="divider-line"></span>
+            </div>
+            <p class="hero-date">11 . 04 . 2026</p>
+            <a href="#events" class="hero-cta">
+                <span>Xem chi tiết</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7" />
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Đếm ngược</span>
+                <h2 class="section-title">Đến ngày trọng đại</h2>
+            </div>
+            <div class="countdown-timer" id="countdown-timer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Ngày</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Giờ</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Phút</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Giây</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couple Section -->
+    <section id="couple">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Đôi lời về chúng tôi</span>
+                <h2 class="section-title">Cô Dâu & Chú Rể</h2>
+            </div>
+            <div class="couple-grid">
+                <div class="couple-card reveal-left">
+                    <div class="couple-image-wrapper">
+                        <div class="couple-image-frame">
+                            <img src="img/660459922_1531405665661410_4816937941728620308_n.jpg" alt="Cô dâu"
+                                loading="lazy">
+                        </div>
+                        <div class="couple-image-decoration"></div>
+                    </div>
+                    <div class="couple-info">
+                        <h3 class="couple-name">Nam</h3>
+                        <p class="couple-role">Chú Rể</p>
+                        <p class="couple-desc">Con trai yêu quý của gia đình, với nụ cười tỏa nắng và trái tim ấm áp,
+                            luôn mang đến niềm vui cho mọi người xung quanh.</p>
+                    </div>
+                </div>
+
+                <div class="couple-heart-center">
+                    <div class="heart-pulse">
+                        <svg viewBox="0 0 100 100" width="60" height="60">
+                            <path
+                                d="M50 88 C25 65, 0 50, 0 30 C0 13, 13 0, 30 0 C40 0, 48 5, 50 12 C52 5, 60 0, 70 0 C87 0, 100 13, 100 30 C100 50, 75 65, 50 88Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="couple-card reveal-right">
+                    <div class="couple-image-wrapper">
+                        <div class="couple-image-frame">
+                            <img src="img/661677824_1531405438994766_6818453240961560729_n.jpg" alt="Chú rể"
+                                loading="lazy">
+                        </div>
+                        <div class="couple-image-decoration"></div>
+                    </div>
+                    <div class="couple-info">
+                        <h3 class="couple-name">Quỳnh</h3>
+                        <p class="couple-role">Cô Dâu</p>
+                        <p class="couple-desc">Cô gái dịu dàng và xinh đẹp, luôn mang đến niềm vui và hạnh phúc cho
+                            người mình yêu thương, hứa sẽ mãi bên nhau.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Story Section -->
+    <section id="story">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Tình yêu của chúng tôi</span>
+                <h2 class="section-title">Câu Chuyện Tình Yêu</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot">
+                        <span>💕</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="img/659088873_1531405575661419_8730006334640590239_n.jpg" alt="Lần đầu gặp gỡ"
+                                class="tl-img-1" loading="lazy">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">Ngày đầu tiên</span>
+                            <h3>Lần đầu gặp gỡ</h3>
+                            <p>Cuộc gặp gỡ tình cờ đã khiến trái tim hai người rung động. Từ ánh mắt đầu tiên, chúng tôi
+                                biết đó là định mệnh.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot">
+                        <span>💑</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="img/662131116_1531405462328097_745054962719200719_n.jpg" alt="Yêu nhau"
+                                class="tl-img-2" loading="lazy">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">Khoảng thời gian đẹp</span>
+                            <h3>Yêu nhau</h3>
+                            <p>Những ngày tháng bên nhau, cùng nhau trải qua bao kỷ niệm đẹp, cùng nhau xây dựng tình
+                                yêu ngày càng sâu đậm.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot">
+                        <span>💍</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="img/659104423_1531405532328090_7857669225711361761_n.jpg" alt="Lời cầu hôn"
+                                class="tl-img-3" loading="lazy">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">Khoảnh khắc đặc biệt</span>
+                            <h3>Lời cầu hôn</h3>
+                            <p>Câu trả lời "Có" ngọt ngào nhất, mở ra chương mới đầy hạnh phúc trong câu chuyện tình yêu
+                                của hai người.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot">
+                        <span>💒</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="img/659073452_1531405208994789_7178818462982836843_n.jpg" alt="Ngày trọng đại"
+                                class="tl-img-4" loading="lazy">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">11/04/2026</span>
+                            <h3>Ngày trọng đại</h3>
+                            <p>Ngày mà chúng tôi chính thức nắm tay nhau bước vào cuộc sống mới, cùng nhau viết nên câu
+                                chuyện hạnh phúc mãi mãi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Khoảnh khắc đáng nhớ</span>
+                <h2 class="section-title">Album Ảnh Cưới</h2>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item gallery-item-tall reveal-up">
+                    <img src="img/659126000_1531405222328121_8455661263865379873_n.jpg" alt="Ảnh cưới 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" style="animation-delay: 0.1s">
+                    <img src="img/658907526_1531405358994774_4876686726396573817_n.jpg" alt="Ảnh cưới 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" style="animation-delay: 0.2s">
+                    <img src="img/659073452_1531405208994789_7178818462982836843_n.jpg" alt="Ảnh cưới 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-wide reveal-up" style="animation-delay: 0.15s">
+                    <img src="img/660336747_1531405325661444_3321202231186827914_n.jpg" alt="Ảnh cưới 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" style="animation-delay: 0.25s">
+                    <img src="img/659104423_1531405532328090_7857669225711361761_n.jpg" alt="Ảnh cưới 5" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" style="animation-delay: 0.3s">
+                    <img src="img/661370969_1531405792328064_4030687520253144574_n.jpg" alt="Ảnh cưới 6" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-tall reveal-up" style="animation-delay: 0.2s">
+                    <img src="img/659156318_1531405745661402_7447017328897641641_n.jpg" alt="Ảnh cưới 7" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" style="animation-delay: 0.35s">
+                    <img src="img/662131116_1531405462328097_745054962719200719_n.jpg" alt="Ảnh cưới 8" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" style="animation-delay: 0.4s">
+                    <img src="img/660524463_1531405408994769_5773492560305324572_n.jpg" alt="Ảnh cưới 9" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-wide reveal-up" style="animation-delay: 0.3s">
+                    <img src="img/659829676_1531405188994791_307083599122231537_n.jpg" alt="Ảnh cưới 10" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" style="animation-delay: 0.45s">
+                    <img src="img/661707271_1531405298994780_9103709460694425127_n.jpg" alt="Ảnh cưới 11"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" style="animation-delay: 0.5s">
+                    <img src="img/658821470_1531405278994782_2878522193686250916_n.jpg" alt="Ảnh cưới 12"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🤍</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Đóng">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Ảnh trước">‹</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Ảnh sau">›</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Ảnh phóng to">
+        </div>
+        <div class="lightbox-counter">
+            <span id="lightbox-current">1</span> / <span id="lightbox-total">12</span>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <section id="events">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Lịch trình sự kiện</span>
+                <h2 class="section-title">Thông Tin Lễ Cưới</h2>
+            </div>
+            <div class="events-grid">
+                <div class="event-card reveal-left">
+                    <div class="event-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <div class="event-decoration-line"></div>
+                    <h3 class="event-title">Lễ Nạp Tài</h3>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <span>08:00 - Thứ Năm</span>
+                        </div>
+                        <div class="event-detail">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            <span>09/04/2026(Tức 22/2 Âm Lịch)</span>
+                        </div>
+                        <div class="event-detail">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>Tư gia nhà gái<br>123 Đường ABC, Phường XYZ</span>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="event-map-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Xem bản đồ
+                    </a>
+                </div>
+
+                <div class="event-card event-card-featured reveal-up">
+                    <div class="event-featured-badge">Sự kiện chính</div>
+                    <div class="event-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <div class="event-decoration-line"></div>
+                    <h3 class="event-title">Tiệc Cưới</h3>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <span>08:00 - Thứ Sáu</span>
+                        </div>
+                        <div class="event-detail">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            <span>10/03/2026(Tức 23/2 Âm Lịch)</span>
+                        </div>
+                        <div class="event-detail">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>Số nhà 286, Thôn 3, xã Triệu Sơn</span>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="event-map-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Xem bản đồ
+                    </a>
+                </div>
+
+                <div class="event-card reveal-right">
+                    <div class="event-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <div class="event-decoration-line"></div>
+                    <h3 class="event-title">Lễ Thành Hôn</h3>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <span>09:00 - Thứ Bảy</span>
+                        </div>
+                        <div class="event-detail">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            <span>11/03/2026(Tức 24/2 Âm Lịch)</span>
+                        </div>
+                        <div class="event-detail">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>Số nhà 286, Thôn 3, xã Triệu Sơn</span>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="event-map-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Xem bản đồ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Wishes Display -->
+    <section id="wishes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Từ trái tim</span>
+                <h2 class="section-title">Lời Chúc Phúc</h2>
+            </div>
+            <div class="wishes-grid" id="wishes-grid">
+                <div class="wish-card reveal-up">
+                    <div class="wish-avatar">Đ</div>
+                    <div class="wish-content">
+                        <h4>Anh Đại</h4>
+                        <p>"Chúc hai em trăm năm hạnh phúc, sớm có tin vui! 🎉"</p>
+                    </div>
+                </div>
+                <div class="wish-card reveal-up">
+                    <div class="wish-avatar">D</div>
+                    <div class="wish-content">
+                        <h4>Em Dũng</h4>
+                        <p>"Chúc mừng hạnh phúc anh chị! Cặp đôi đẹp nhất! 💕"</p>
+                    </div>
+                </div>
+                <div class="wish-card reveal-up">
+                    <div class="wish-avatar">H</div>
+                    <div class="wish-content">
+                        <h4>Anh Huynh</h4>
+                        <p>"Chúc hai em trăm năm hạnh phúc, vạn sự như ý! Hạnh phúc mãi mãi nhé! 🥂"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-bg"
+            style="background-image: url('img/660524727_1531405775661399_2648193297180457444_n.jpg')"></div>
+        <div class="footer-overlay"></div>
+        <div class="footer-content">
+            <div class="footer-names">
+                <span class="footer-script">Nam</span>
+                <span class="footer-amp">&</span>
+                <span class="footer-script">Hạnh</span>
+            </div>
+            <p class="footer-date">11 . 04 . 2026</p>
+            <div class="footer-divider">
+                <span></span>
+                <svg viewBox="0 0 100 100" width="24" height="24" fill="rgba(255,255,255,0.8)">
+                    <path
+                        d="M50 88 C25 65, 0 50, 0 30 C0 13, 13 0, 30 0 C40 0, 48 5, 50 12 C52 5, 60 0, 70 0 C87 0, 100 13, 100 30 C100 50, 75 65, 50 88Z" />
+                </svg>
+                <span></span>
+            </div>
+            <p class="footer-quote">"Mỗi câu chuyện tình yêu đều đẹp,<br>nhưng câu chuyện của chúng tôi là đẹp nhất."
+            </p>
+            <p class="footer-credit">Made with ♥</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Lên đầu trang">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- Background Music Toggle -->
+    <button id="music-toggle" class="music-toggle" aria-label="Bật/tắt nhạc">
+        <svg id="music-on" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+        </svg>
+        <svg id="music-off" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="2" style="display:none">
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+            <line x1="1" y1="1" x2="23" y2="23" stroke-width="3" />
+        </svg>
+    </button>
+
+    <audio id="bg-music" loop preload="auto">
+        <source src="img/Ngày Đầu Tiên.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
